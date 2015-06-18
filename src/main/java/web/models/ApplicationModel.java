@@ -3,7 +3,6 @@ package web.models;
 import java.util.List;
 
 import org.demo.core.entities.Client;
-import org.demo.core.entities.Compte;
 import org.demo.core.metier.IMetier;
 import org.demo.core.metier.Metier;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ public class ApplicationModel implements IMetier{
 	private Metier métier;
 	
 	
-	@Override
 	public List<Client> getAllClients() {
 		return métier.getAllClients();
 	}
@@ -29,12 +27,12 @@ public class ApplicationModel implements IMetier{
 	}
 	
 	
-	@Override
-	public List<Compte> getAllComptes() {
-		return métier.getAllComptes();
-	}
-
-	public Compte saveCompte(Compte compte) {
-		return métier.saveComptes(compte);
-	}
+//	@Override
+//	public List<Compte> getAllComptes() {
+//		return métier.getAllComptes();
+//	}
+//
+//	public Compte saveCompte(Compte compte) {
+//		return métier.saveComptes(compte);
+//	}
 }
