@@ -27,14 +27,10 @@ public class Controller1 {
 //	messages = application.getMessages();
 //	}
 	
-	
-
 	@RequestMapping(value = "/client", method = RequestMethod.POST)
 	public Client saveClient(@RequestBody Client client) {
 		return application.saveClient(client);
 	}
-	
-	
 	
 	// liste des clients
 	@RequestMapping(value = "/getAllClients", method = RequestMethod.GET)
@@ -42,16 +38,17 @@ public class Controller1 {
 			return application.getAllClients();
 	}
 	
-	
-	
-	@RequestMapping(value = "/compte", method = RequestMethod.POST)
-	public Compte saveCompte(@RequestBody Compte compte) {
-		return application.saveCompte(compte);
+	// liste des comptes
+	@RequestMapping(value = "/getAllComptes", method = RequestMethod.GET)
+	public List<Compte> getAllComptes() {
+			return application.getAllComptes();
 	}
 	
-	// liste des comptes
-		@RequestMapping(value = "/getAllComptes", method = RequestMethod.GET)
-		public List<Compte> getAllComptes() {
-				return application.getAllComptes();
-		}
+	
+//	@RequestMapping(value = "/compte", method = RequestMethod.POST)
+//	public Compte saveCompte(@RequestBody Compte compte) {
+//		return application.saveCompte(compte);
+//	}
+	
+	
 }

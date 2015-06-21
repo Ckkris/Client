@@ -12,14 +12,14 @@ angular.module('formExample1', [])
     	
     	$scope.saveCompte = function() {
     		var compte = $scope.user1;
-    		$http.post('/compte', compte).success(function(data) {
-    			$scope.user1 = data;
+    		$http.post('/compte', compte).success(function(data1) {
+    			$scope.user1 = data1;
     		});
     	};
     	
     	$scope.asyncLoadCompte = function() {
-    		$http.get('/getAllComptes').success(function(data) {
-    			$scope.compte = data;
+    		$http.get('/getAllComptes').success(function(data1) {
+    			$scope.compte = data1;
     		});
     	}
     });

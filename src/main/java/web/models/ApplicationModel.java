@@ -14,27 +14,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationModel implements IMetier{
 
-
 	@Autowired
 	private Metier métier;
-	
 	
 	@Override
 	public List<Client> getAllClients() {
 		return métier.getAllClients();
 	}
-
+	
 	public Client saveClient(Client client) {
 		return métier.saveClients(client);
 	}
-	
 	
 	@Override
 	public List<Compte> getAllComptes() {
 		return métier.getAllComptes();
 	}
 
-	public Compte saveCompte(Compte compte) {
-		return métier.saveComptes(compte);
-	}
+//	public Compte saveCompte(Compte compte) {
+//		return métier.saveComptes(compte);
+//	}
 }
